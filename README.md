@@ -1,7 +1,11 @@
-# terraform-monitoring-grafana-promtail
+# Terraform-monitoring-grafana-promtail
 
 
 Deploys the "Grafana + Prometheus + Loki" monitoring stack via Helm on AWS EKS.
+
+This project aims to deploy Promtail log analysis services and Loki services to get these logs in a single instance of the Grafana dashboard.
+
+With Loki we will be able to separate the logs according to the planned need and then we will add the Grafana Organizations Plugin to our Grafana deployment and we will add a single Loki instance to a single organization, this way each organization will have its own Loki instance as a data source . Thus, we will be able to isolate logs by organization, on the other hand, the Organizations plugin allows adding users to it, so it will be possible to give access to specific users only to the specific set of data.
 
 [//]: # (BEGIN_TF_DOCS)
 
